@@ -1,0 +1,654 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.main {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.navbar {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  padding: 0px 4%;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0;
+  background: rgba(13, 12, 12, 0.6);
+}
+
+.logo {
+  max-height: 100px;
+  height: 75px;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+/* Text */
+.nav-links ul li a {
+  color: gray;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: color 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+  color: #ac915d; /* Change color on hover */
+}
+
+.nav-links ul li a.active {
+  color: white;
+}
+
+/* .nav-links ul li a:hover {
+  color: white;
+} */
+
+/* Front Page Text */
+.content {
+  background-image: url(/Images/image1.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 773px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.content .bg-text {
+  left: 104px;
+  position: flex;
+  top: 73px;
+  position: absolute;
+  width: 426px;
+  height: 438px;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.content .bg-text .text {
+  color: rgba(255, 255, 255, 0.2);
+  font-family: Times New Roman;
+  font-size: 400px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.content .main-text {
+  padding-top: 305px;
+  padding-left: 157px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.content .main-text .text1 {
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+}
+
+.content .main-text .text2 {
+  margin-top: -20px;
+  padding-left: 59px;
+  color: #fff;
+  font-family: Times New Roman;
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.content .main-text .text3 {
+  padding-top: 50px;
+  color: #fff;
+  font-family: Times New Roman;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.content .main-text .text4 {
+  font-family: Times New Roman;
+  font-size: 16px;
+  padding-top: 25px;
+  color: #eee;
+}
+
+.content .main-text .text5 {
+  color: white;
+  font-family: Times New Roman;
+  font-size: 16px;
+  margin-top: 110px;
+  padding-left: 499px;
+}
+
+/* Content 2 */
+.content2 {
+  background-image: url(/Images/image2.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 724px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Providing Everything You Need */
+.content2 .main-text2 .text1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  font-family: Times New Roman;
+  font-size: 32px;
+  padding-top: 30px;
+}
+
+/* Paragraph 1 */
+.content2 .main-text2 .highlight {
+  color: #ac915d;
+}
+
+.content2 .main-text2 .text2 {
+  text-align: left;
+  color: white;
+  font-family: Times New Roman;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 429px;
+  padding-left: 193px;
+}
+
+/* Paragraph 2 */
+.content2 .main-text2 .text3 {
+  text-align: left;
+  width: 586px;
+  color: white;
+  font-family: Times New Roman;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-right: 103px;
+}
+
+.content2 .main-text2 .text-group {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+/* VECTOR LINE 1 */
+.content2 .vector1 {
+  position: absolute;
+  align-items: center;
+  margin-top: 37px;
+  margin-right: 550px;
+}
+
+/* VECTOR LINE 2 */
+.content2 .vector2 {
+  position: absolute;
+  align-items: center;
+  margin-top: 37px;
+  margin-left: 550px;
+}
+
+.content2 .images {
+  padding-top: 27px;
+  padding-bottom: 88px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 29px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.content2 .images div {
+  position: relative;
+}
+
+.content2 .images img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.content2 .images div:hover img {
+  transform: scale(1.1);
+  opacity: 0.7;
+}
+
+.content2 .images .text2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 31px;
+  transition: opacity 0.3s ease;
+}
+
+.content2 .images div:hover .text2 {
+  opacity: 1;
+}
+
+/* Content3 */
+
+/* Temporary Background image */
+.content3 {
+  align-items: center;
+  background-image: url(/Images/image3.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Text 1 */
+.content3 .main-text3 .text1 {
+  color: #fff;
+  font-family: Times New Roman;
+  font-size: 48px;
+  padding-right: 790px;
+  padding-top: 58px;
+}
+
+/* Vector Below Text 1 */
+.content3 .vector {
+  position: absolute;
+  align-items: left;
+  margin-top: 110px;
+  margin-left: -615px;
+}
+
+/* 3 images */
+.content3 .images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 44px;
+  gap: 86px;
+  margin: 0 auto;
+}
+
+.content3 .images div {
+  position: relative;
+}
+
+.content3 .images img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.content3 .images div:hover img {
+  transform: scale(1.1);
+  opacity: 0.7;
+}
+
+.content3 .images .text2 {
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 31px;
+  transition: opacity 0.3s ease;
+}
+
+.content3 .images div:hover .text2 {
+  opacity: 1;
+}
+
+/*  */
+
+.content3 .description-title {
+  color: white;
+  padding-top: 17px;
+  padding-bottom: 10px;
+}
+
+.content3 .description {
+  color: white;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+/* Content 4 */
+
+/* Background */
+.content4 {
+  align-items: center;
+  background: #201f1f;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 750px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 83px;
+  padding-top: 38.34px;
+}
+
+.content4 .columns {
+  display: flex;
+  gap: 36px;
+}
+
+.content4 .column2 {
+  width: 556px;
+}
+
+/* Paragraph 1 */
+.content4 .columns .text1 {
+  color: white;
+  font-family: Times New Roman;
+  font-size: 35px;
+  width: 652px;
+  padding-bottom: 37.4px;
+}
+
+/* Paragraph 2 */
+.content4 .column2 .text2 {
+  padding-bottom: 10px;
+  width: 556px;
+  color: #dbb56c;
+  font-family: Times New Roman;
+  font-size: 30px;
+  padding-right: 62px;
+}
+
+.content4 .image {
+  width: 703px;
+  display: flex;
+}
+
+.content4 .image-button {
+  gap: 38px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn {
+  padding: 0.3em 1em;
+  border-radius: 138.5px;
+  color: black;
+  background-color: #fddea2;
+  text-align: center;
+  font-size: 20px;
+  border: 0;
+  cursor: pointer;
+  font-family: Times New Roman;
+}
+
+.btn:hover {
+  background-color: #dbb56c;
+  color: black;
+  transform: scale(1.05); /* Scale up the button slightly on hover */
+  transition: transform 0.2s ease; /* Smooth scale transition */
+}
+
+.content4 .boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.content4 .boxes .boxbox {
+  padding: 20px;
+}
+
+.content4 .boxes .box {
+  border-radius: 26px;
+  background: #333334;
+  width: 256px;
+}
+
+.content4 .column2 .boxes p {
+  color: #fff;
+  font-family: Times New Roman;
+  font-size: 20px;
+}
+
+.content4 .column2 .boxes .items {
+  padding-left: inherit;
+  color: white;
+  font-family: Arial;
+  font-size: 15px;
+}
+
+/* CONTENT 5 SECTION */
+
+.content5 {
+  position: relative;
+  height: 390px;
+  background-color: rgba(64, 64, 64, 0.4);
+}
+
+.content5::before {
+  content: "";
+  background-image: url(Images/image\ 17.png);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  filter: blur(2px);
+  z-index: -1;
+}
+
+.content5 .text {
+  color: white;
+  text-align: center;
+  font-family: Times New Roman;
+  font-size: 64px;
+}
+
+.content5 .vect1 {
+  gap: 30px;
+  display: flex;
+  justify-content: center;
+  padding-top: 128px;
+}
+
+.content5 .vector1 {
+  padding-top: 23px;
+}
+
+.content5 .vector2 {
+  padding-top: 23px;
+}
+
+.button {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.content5 .btn1 {
+  padding: 0.3em 1em;
+  border-radius: 138.5px;
+  color: black;
+  background-color: #fddea2;
+  text-align: center;
+  font-size: 20px;
+  border: 0;
+  cursor: pointer;
+  font-family: Times New Roman;
+}
+
+.btn1:hover:hover {
+  background-color: #dbb56c;
+  color: black;
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+
+/* FOOTER SECTION */
+
+.content6 {
+  background: #1d1d1d;
+  display: flex;
+  flex-direction: column;
+  height: 303px;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  color: #fddea2;
+  gap: 150px;
+  padding-bottom: 20px;
+}
+
+/* Upper Text */
+.footer .col h4 {
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  color: #fddea2;
+  margin-bottom: 20px;
+  font-weight: 500;
+  position: relative;
+}
+
+/* Line Below */
+.footer .col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 30px;
+  background-color: white;
+  height: 5%;
+  width: 50px;
+}
+
+/* Removes list style */
+.footer ul {
+  list-style: none;
+}
+
+/* Text Animation */
+.footer ul li {
+  padding: 1px;
+  transition: transofmr 0.3 ease;
+}
+
+.footer ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+}
+
+.footer ul li {
+  transition: transform 0.3s ease;
+}
+
+.footer ul li a:hover {
+  transform: translateX(5px);
+  color: #ac915d;
+}
+
+/* Social Links */
+
+.Logos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+.social-links a:hover {
+  color: #ac915d;
+  transform: scale(1.2); /* Increase size on hover */
+}
+
+.copyright {
+  color: white;
+}
