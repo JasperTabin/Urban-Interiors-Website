@@ -82,7 +82,7 @@
 
 /* Front Page Text */
 .content {
-  background-image: url(/Images/image1.jpg);
+  background-image: url(Images/image1.jpg);
   background-position: center;
   background-size: cover;
   position: relative;
@@ -164,7 +164,7 @@
 
 /* Content 2 */
 .content2 {
-  background-image: url(/Images/image2.png);
+  background-image: url(Images/image2.png);
   background-position: center;
   background-size: cover;
   position: relative;
@@ -292,7 +292,7 @@
 /* Temporary Background image */
 .content3 {
   align-items: center;
-  background-image: url(/Images/image3.png);
+  background-image: url(Images/image3.png);
   background-position: center;
   background-size: cover;
   position: relative;
