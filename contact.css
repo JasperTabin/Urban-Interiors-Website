@@ -52,87 +52,91 @@ body {
   color: white;
 }
 
-/* Contact Section */
-
-.contact {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* BANNER */
+.banner {
+  padding: 10rem 0;
+  background-image: url("images/image26.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.contact .Title {
-  padding: 60px;
+.banner__container {
+  text-align: center;
+  color: var(--white);
+  font-family: var(--header-font);
 }
 
-.contact .Title h1 {
-  text-align: start;
-  font-family: "Oswald", sans-serif;
+.banner__container h1 {
+  font-size: 5rem;
+  font-weight: 400;
   color: #ac915d;
-  font-size: 3rem;
 }
 
-.contact .Title p {
-  text-align: start;
-  font-family: "Oswald", sans-serif;
+.banner__container p {
+  font-size: 1.5rem;
   color: white;
-  font-size: 1.3rem;
-  width: 1000px;
-  padding-bottom: 30px;
 }
-
 /* Contact Form */
 
-.contact-form {
-  border-radius: 5px;
-  max-width: 1000px;
-  width: 100%;
-}
-
-.contact-form label {
-  color: white;
-  font-family: "Roboto Mono", monospace;
-  font-size: 1rem;
-  margin-bottom: 8px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0;
-  border: 1px solid #ac915d;
-  border-radius: 4px;
-  margin-bottom: 45px;
-}
-
-.contact-form input[type="submit"] {
-  width: 100px;
-  background-color: #ac915d;
-  color: white;
-  font-family: "Roboto Mono", monospace;
-  cursor: pointer;
-  margin: 0 auto;
-  display: block;
-  margin-top: 16px;
-  margin-bottom: 50px;
-}
-
-.contact-form input[type="submit"]:hover {
-  background-color: #ac915d;
-  color: white;
-}
-
-.Image {
-  text-align: center;
+.container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  background-color: #1f2021;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
 }
 
-.Image img {
+.left-side,
+.right-side {
+  flex: 1;
+  padding: 20px;
+}
+.Title h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+form {
+  display: grid;
+  gap: 15px;
+  max-width: 400px;
+  /* width: 100%; */
+}
+
+input,
+textarea {
+  width: 470px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
   border-radius: 4px;
-  width: 1000px;
-  height: auto;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 14px;
 }
 
+input[type="submit"] {
+  background-color: #808183;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+}
+
+input[type="submit"]:hover {
+  background-color: #272829;
+}
+
+/* FOOTER SECTION */
 .content6 {
   background: #1d1d1d;
   display: flex;

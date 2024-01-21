@@ -52,6 +52,32 @@ body {
   color: white;
 }
 
+/* BANNER */
+.banner {
+  padding: 10rem 0;
+  background-image: url("images/image27.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.banner__container {
+  text-align: center;
+  color: var(--white);
+  font-family: var(--header-font);
+}
+
+.banner__container h4 {
+  color: #ac915d;
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+.banner__container p {
+  font-size: 1.5rem;
+  color: white;
+}
+
 /* PROJECT SECTION */
 
 .CategoryContainer {
@@ -113,7 +139,6 @@ body {
   margin: 0;
 }
 
-/* Remove hover animations */
 .GalleryItem .ImageOverlay {
   transform: none;
 }
