@@ -15,6 +15,40 @@
     />
   </head>
   <body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const enlargeableImages = document.querySelectorAll(".image");
+
+        enlargeableImages.forEach((image) => {
+          image.addEventListener("click", function () {
+            const imageSrc = this.querySelector("img").src;
+            const title = this.dataset.title;
+            const description = this.dataset.description;
+
+            enlargeImage(imageSrc, title, description);
+          });
+        });
+
+        document
+          .getElementById("enlarged-image-container")
+          .addEventListener("click", function () {
+            closeModal();
+          });
+      });
+
+      function enlargeImage(imageSrc, title, description) {
+        document.getElementById("enlarged-image").src = imageSrc;
+        description;
+        document.getElementById("enlarged-image-container").style.display =
+          "flex";
+      }
+
+      function closeModal() {
+        document.getElementById("enlarged-image-container").style.display =
+          "none";
+      }
+    </script>
+
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
     <nav class="navbar">
@@ -82,15 +116,27 @@
     <!-- PORTRAIT -->
     <div class="Project">
       <div class="Project-Image">
-        <div class="ProjectItem">
+        <div
+          class="ProjectItem image"
+          data-title="Portrait 1"
+          data-description="Description 1"
+        >
           <img src="Images/Project2/P7.jpg" />
         </div>
 
-        <div class="ProjectItem">
-          <img src="Images/Project2/P8.jpg " />
+        <div
+          class="ProjectItem image"
+          data-title="Portrait 2"
+          data-description="Description 2"
+        >
+          <img src="Images/Project2/P8.jpg" />
         </div>
 
-        <div class="ProjectItem">
+        <div
+          class="ProjectItem image"
+          data-title="Portrait 3"
+          data-description="Description 3"
+        >
           <img src="Images/Project2/P9.jpg" />
         </div>
       </div>
@@ -99,17 +145,36 @@
     <!-- LANDSCAPE -->
     <div class="Projects">
       <div class="Project-Images">
-        <div class="ProjectItems">
+        <div
+          class="ProjectItems image"
+          data-title="Landscape 1"
+          data-description="Description 4"
+        >
           <img src="Images/Project2/P5.jpg" />
         </div>
 
-        <div class="ProjectItems">
+        <div
+          class="ProjectItems image"
+          data-title="Landscape 2"
+          data-description="Description 5"
+        >
           <img src="Images/Project2/P3.jpg" />
         </div>
 
-        <div class="ProjectItems">
+        <div
+          class="ProjectItems image"
+          data-title="Landscape 3"
+          data-description="Description 6"
+        >
           <img src="Images/Project2/P1.jpg" />
         </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="enlarged-image-container">
+      <div id="enlarged-image-content" onclick="closeModal()">
+        <img id="enlarged-image" />
       </div>
     </div>
 

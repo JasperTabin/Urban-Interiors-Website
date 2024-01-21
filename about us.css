@@ -245,6 +245,38 @@ body {
   object-fit: cover;
 }
 
+/* ABOUT SECTION */
+.About {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.About-title h1 {
+  margin: 30px;
+  text-align: center;
+  font-weight: 100;
+  font-size: 2.5rem;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  color: #ac915d;
+}
+
+.About-Message {
+  display: flex;
+  text-align: center;
+  padding-left: 350px;
+  padding-right: 350px;
+  padding-bottom: 50px;
+  color: white;
+}
+
+.About-Message p {
+  font-size: 1.2rem;
+}
+
 /* Footer */
 .content6 {
   background: #1d1d1d;

@@ -12,6 +12,40 @@
   </head>
 
   <body>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // Get all elements with the class 'image'
+        const enlargeableImages = document.querySelectorAll('.image');
+    
+        // Add a click event listener to each image
+        enlargeableImages.forEach(image => {
+          image.addEventListener('click', function () {
+            // Get the source, title, and description of the clicked image
+            const imageSource = this.querySelector('img').src;
+            const title = this.querySelector('.text2').innerText;
+            const description = this.querySelector('.description').innerText;
+    
+            // Call the enlargeImage function with the clicked image details
+            enlargeImage(imageSource, title, description);
+          });
+        });
+    
+        // Add a click event listener to the enlarged image container to close it
+        document.getElementById('enlarged-image-container').addEventListener('click', function () {
+          this.style.display = 'none';
+        });
+      });
+    
+      function enlargeImage(imageSrc, title, description) {
+        document.getElementById('enlarged-image').src = imageSrc;
+        document.getElementById('enlarged-image-title').innerText = title;
+        document.getElementById('enlarged-image-description').innerText = description;
+        document.getElementById('enlarged-image-container').style.display = 'flex';
+      }
+    </script>
+    
+    
+
     <div class="main">
       <div class="container">
         <nav class="navbar">
@@ -93,24 +127,33 @@
           </div>
 
           <div class="images">
-            <div>
-              <img src="Images/image 8.png" />
+            <div class="image" onclick="enlargeImage('Images/image 8.png', 'DINING & KITCHEN', 'Description for Dining & Kitchen.')">
+              <img src="Images/image 8.png" alt="DINING & KITCHEN" />
               <p class="text2">DINING & KITCHEN</p>
             </div>
-
-            <div class="image text">
-              <img src="Images/image 10.png" />
+          
+            <div class="image" onclick="enlargeImage('Images/image 10.png', 'BEDROOM', 'Description for Bedroom.')">
+              <img src="Images/image 10.png" alt="BEDROOM" />
               <p class="text2">BEDROOM</p>
             </div>
-
-            <div class="image text">
-              <img src="Images/image 7.png" />
+          
+            <div class="image" onclick="enlargeImage('Images/image 7.png', 'LOUNGE ROOM', 'Description for Lounge Room.')">
+              <img src="Images/image 7.png" alt="LOUNGE ROOM" />
               <p class="text2">LOUNGE ROOM</p>
             </div>
-
-            <div class="image text">
-              <img src="Images/image 9.png" />
+          
+            <div class="image" onclick="enlargeImage('Images/image 9.png', 'KITCHEN', 'Description for Kitchen.')">
+              <img src="Images/image 9.png" alt="KITCHEN" />
               <p class="text2">KITCHEN</p>
+            </div>
+          </div>
+        
+          <!-- Add a container for the enlarged image -->
+          <div class="enlarged-image-container" id="enlarged-image-container">
+            <img id="enlarged-image" alt="" />
+            <div class="enlarged-image-details">
+              <h2 id="enlarged-image-title"></h2>
+              <p id="enlarged-image-description"></p>
             </div>
           </div>
         </div>
@@ -134,32 +177,28 @@
           </div>
 
           <div class="images">
-            <div>
-              <img src="Images/image 11.png" />
-              <p class="text2">
-                BATHROOM
-              </p>
-              <h2 class="description-title">BATHROOM</h2>
-              <p class="description">Aestethic bathroom design</p>
-            </div>
+  <div onclick="enlargeImage('Images/image 11.png', 'BATHROOM', 'Aestethic bathroom design.')">
+    <img src="Images/image 11.png" alt="BATHROOM" />
+    <p class="text2">BATHROOM</p>
+    <h2 class="description-title">BATHROOM</h2>
+    <p class="description">Aestethic bathroom design</p>
+  </div>
 
-            <div>
-              <img src="Images/image 12.png" />
-              <p class="text2">
-                LIVING ROOM
-              </p>
-              <h2 class="description-title">LIVING ROOM</h2>
-              <p class="description">A simplistic living room design</p>
-            </div>
-            <div>
-              <img src="Images/image 15.png" />
-              <p class="text2">
-                DINING ROOM
-              </p>
-              <h2 class="description-title">DINING ROOM</h2>
-              <p class="description">A contemporary Dining room design</p>
-            </div>
-          </div>
+  <div onclick="enlargeImage('Images/image 12.png', 'LIVING ROOM', 'A simplistic living room design.')">
+    <img src="Images/image 12.png" alt="LIVING ROOM" />
+    <p class="text2">LIVING ROOM</p>
+    <h2 class="description-title">LIVING ROOM</h2>
+    <p class="description">A simplistic living room design</p>
+  </div>
+
+  <div onclick="enlargeImage('Images/image 15.png', 'DINING ROOM', 'A contemporary Dining room design.')">
+    <img src="Images/image 15.png" alt="DINING ROOM" />
+    <p class="text2">DINING ROOM</p>
+    <h2 class="description-title">DINING ROOM</h2>
+    <p class="description">A contemporary Dining room design</p>
+  </div>
+</div>
+
         </div>
 
         <!-- Content 4 -->
