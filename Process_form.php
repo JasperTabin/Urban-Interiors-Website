@@ -1,7 +1,7 @@
 <?php
 
 $servername = "localhost";
-$dbname = "user_db";  // Assuming 'contact_forms' is under 'user_db'
+$dbname = "Urban Server";  // Assuming 'contact_forms' is under 'user_db'
 $username = "root";
 $password = "";
 
@@ -19,8 +19,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $number = test_input($_POST["number"]);
     $message = test_input($_POST["message"]);
 
-    // SQL query to insert data into the contact_forms table
-    $sql = "INSERT INTO contact_forms (name, email, number, message) VALUES ('$name', '$email', '$number', '$message')";
+    // Updated SQL query to insert data into the contact_forms table
+    $sql = "INSERT INTO contact_form (name, email, number, message, created_at) VALUES ('$name', '$email', '$number', '$message', CURRENT_TIMESTAMP)";
 
     if ($conn->query($sql) === TRUE) {
         echo "Record inserted successfully";

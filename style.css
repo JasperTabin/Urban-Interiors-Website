@@ -312,7 +312,7 @@
   bottom: 0; /* Updated from top: 0 to move to the bottom */
   left: 0; /* Updated from right: 0 to align with the left */
   width: 100%; /* Updated from 40% to take full width */
-  height: 55%; /* Adjust the height as needed */
+  height: 35%; /* Adjust the height as needed */
   display: flex;
   flex-direction: column;
   justify-content: center;
